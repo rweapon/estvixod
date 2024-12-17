@@ -4,8 +4,10 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    font-size: 16px;
+    --base-100: 220, 65%, 99%;
+    --base-200: 220, 65%, 95%;
+    --foreground: 0, 2%, 9%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --popover: 0 0% 100%;
@@ -14,10 +16,10 @@
     --input: 214.3 31.8% 91.4%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0, 2%, 9%;
+    --primary-foreground: 220, 65%, 99%;
+    --secondary: 214, 50%, 25%;
+    --secondary-foreground: 220, 65%, 99%;
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 100% 50%;
@@ -27,7 +29,7 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
+    --base: 224 71% 4%;
     --foreground: 213 31% 91%;
     --muted: 223 47% 11%;
     --muted-foreground: 215.4 16.3% 56.9%;
@@ -54,6 +56,50 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-base-100 text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  svg * {
+    @apply font-sans duration-300;
+  }
+
+  svg {
+    @apply max-w-full h-auto;
+  }
+}
+
+@layer components {
+  .container {
+    @apply relative mx-auto;
+  }
+
+  .icon-link {
+    @apply cursor-pointer hover:opacity-80 duration-300;
+  }
+
+  .header-link {
+    @apply relative;
+
+    &::after {
+      @apply absolute top-full left-1/2 translate-x-[-50%] w-0 h-0.5 bg-foreground duration-300;
+      content: "";
+    }
+
+    &:hover {
+      &::after {
+        @apply w-full;
+      }
+    }
   }
 }
