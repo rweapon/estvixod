@@ -1,1 +1,1 @@
-TSX VITE TEMPLATE WITH FSD
+Сайт визитка для юридической фирмы
