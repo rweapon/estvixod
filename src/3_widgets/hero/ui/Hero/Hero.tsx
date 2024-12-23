@@ -1,4 +1,4 @@
-import { Button } from "@shared/ui";
+import { ActionDialog, Button } from "@shared/ui";
 
 export default function Hero() {
   return (
@@ -13,12 +13,7 @@ export default function Hero() {
           Списать долги? Законно. Официально. Навсегда.
           <br /> Банкротство физических лиц — путь к финансовой свободе.
         </p>
-        <Button
-          variant="secondary"
-          className="text-lg sm:text-base font-bold p-8"
-        >
-          КОНСУЛЬТАЦИЯ
-        </Button>
+        <ActionDialog />
       </div>
       <div className="hero_gradient" />
     </section>

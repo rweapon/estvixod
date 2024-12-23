@@ -61,7 +61,7 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-base-100 text-foreground;
+    @apply font-sans antialiased bg-base-100 text-foreground h-dvh;
   }
 
   h1,
@@ -90,7 +90,15 @@
   }
 
   .icon-link {
-    @apply cursor-pointer hover:opacity-80 duration-300;
+    @apply cursor-pointer hover:opacity-80 active:translate-y-1 duration-300;
+  }
+
+  .contacts-link {
+    @apply flex items-center gap-2 text-base-100 text-base hover:opacity-80 active:translate-y-1 duration-300;
+  }
+
+  .whatsapp .fill_layer {
+    fill: hsl(var(--base-100));
   }
 
   .header-link {
