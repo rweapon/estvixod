@@ -7,6 +7,8 @@
     font-size: 16px;
     --base-100: 220, 65%, 99%;
     --base-200: 220, 65%, 95%;
+    --paragraph-100: 15, 2%, 33%;
+    --paragraph-200: 20, 3%, 21%;
     --foreground: 0, 2%, 9%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -19,6 +21,9 @@
     --primary: 0, 2%, 9%;
     --primary-foreground: 220, 65%, 99%;
     --secondary: 214, 50%, 25%;
+    --secondary-100: 217, 70%, 70%;
+    --secondary-200: 214, 54%, 54%;
+    --secondary-300: 214, 47%, 39%;
     --secondary-foreground: 220, 65%, 99%;
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
@@ -101,5 +106,27 @@
         @apply w-full;
       }
     }
+  }
+
+  .hero {
+    @apply relative h-[unset] md:h-[727px] px-8 py-16 md:p-0 w-full md:bg-[url("@shared/assets/hero_bg/hero_bg.png")] bg-no-repeat bg-center bg-cover;
+  }
+
+  .hero_gradient {
+    @apply absolute w-full h-full top-0 left-0 bg-gradient-to-b from-[#fbfcfe] to-[#eaeffb] md:from-[#f4ebe670] md:via-[#ededf4e4] md:to-[#eaeffb];
+  }
+
+  .achievement_text {
+    & h3 {
+      @apply font-sans text-4xl md:text-5xl font-bold leading-tight;
+    }
+
+    & p {
+      @apply text-xl text-base-200;
+    }
+  }
+
+  .achievements_bg {
+    @apply absolute top-0 left-0 w-full h-full bg-[url("@shared/assets/achievements_bg/achievements_bg.png")] bg-cover bg-center;
   }
 }

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 export default function LayoutHeader() {
   return (
-    <header className="bg-base-100 py-4 px-10 ">
+    <header className="bg-base-100 py-6 px-10 ">
       <div className="container flex flex-col sm:flex-row gap-4 sm:gap-0  items-center justify-between">
         <Link to={"/"} className="flex items-center gap-1 icon-link">
           <div className="max-w-12">
             <Logo name="Есть Выход" width={600} height={600} />
           </div>
-          <p className="text-2xl font-sans font-bold">Есть Выход</p>
+          <p className="text-2xl text-secondary font-sans font-bold">Есть Выход</p>
         </Link>
         <nav className="hidden lg:block">
           <ul className="flex gap-8 text-xl">

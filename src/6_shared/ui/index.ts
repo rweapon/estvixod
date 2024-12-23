@@ -1,5 +1,5 @@
 import { Button } from "@shared/ui/Button/Button";
-import EmojiSpan from "@shared/ui/EmojiSpan/EmojiSpan";
 import IconLink from "@shared/ui/IconLink/IconLink";
+import { Separator } from "@shared/ui/Separator/separator";
 
-export { Button, EmojiSpan, IconLink };
+export { Button, IconLink, Separator };

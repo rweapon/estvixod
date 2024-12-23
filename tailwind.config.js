@@ -24,6 +24,8 @@ export default {
         ring: "hsla(var(--ring))",
         "base-100": "hsla(var(--base-100))",
         "base-200": "hsla(var(--base-200))",
+        "paragraph-100": "hsla(var(--paragraph-100))",
+        "paragraph-200": "hsla(var(--paragraph-200))",
         foreground: "hsla(var(--foreground))",
         primary: {
           DEFAULT: "hsla(var(--primary))",
@@ -33,6 +35,9 @@ export default {
           DEFAULT: "hsla(var(--secondary))",
           foreground: "hsla(var(--secondary-foreground))",
         },
+        "secondary-100": "hsla(var(--secondary-100))",
+        "secondary-200": "hsla(var(--secondary-200))",
+        "secondary-300": "hsla(var(--secondary-300))",
         destructive: {
           DEFAULT: "hsla(var(--destructive))",
           foreground: "hsla(var(--destructive-foreground))",
