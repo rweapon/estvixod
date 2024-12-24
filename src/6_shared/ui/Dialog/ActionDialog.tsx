@@ -15,11 +15,13 @@ import {
   DialogHeader,
 } from "@shared/ui/Dialog/components";
 import { Button } from "@shared/ui/Button/Button";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { Input } from "@shared/ui/Input/Input";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { isValidPhoneNumber } from "react-phone-number-input";
+import { z } from "zod";
+import PhoneInput from "react-phone-number-input/input";
 
 type Props = {
   location?: "hero" | "action";
@@ -29,9 +31,12 @@ const FormSchema = z.object({
   name: z.string().min(1, {
     message: "Имя должно содержать хотя бы 1 букву",
   }),
-  phone: z.string().min(11, {
-    message: "Телефон должен содержать 11 цифр.",
-  }),
+  phone: z
+    .string()
+    .min(11, {
+      message: "Телефон должен содержать 11 цифр.",
+    })
+    .refine(isValidPhoneNumber, { message: "Неправильный номер телефона" }),
 });
 
 export default function ActionDialog({ location = "hero" }: Props) {
@@ -109,13 +114,15 @@ export default function ActionDialog({ location = "hero" }: Props) {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input
+                      <PhoneInput
                         required
+                        defaultCountry="RU"
+                        useNationalFormatForDefaultCountryValue
                         type="tel"
                         pattern="^[\d\+\-\.\(\)\/\s]*$"
                         autoComplete="tel webauthn"
                         placeholder="Телефон"
-                        className="text-base md:text-lg p-6"
+                        className="flex h-9 w-full rounded-md border border-input bg-transparent text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-lg p-6"
                         {...field}
                       />
                     </FormControl>
