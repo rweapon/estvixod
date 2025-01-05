@@ -1,4 +1,4 @@
-import { ActionDialog, Button } from "@shared/ui";
+import { ActionDialog } from "@features/action";
 
 export default function Hero() {
   return (

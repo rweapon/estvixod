@@ -1,13 +1,13 @@
-import Bag from "@shared/assets/card-icons/bag.svg?react";
-import Plane from "@shared/assets/card-icons/plane.svg?react";
-import Shield from "@shared/assets/card-icons/shield.svg?react";
-import Handshake from "@shared/assets/card-icons/handshake.svg?react";
+import Bag from "@shared/assets/adv_card-icons/bag.svg?react";
+import Plane from "@shared/assets/adv_card-icons/plane.svg?react";
+import Shield from "@shared/assets/adv_card-icons/shield.svg?react";
+import Handshake from "@shared/assets/adv_card-icons/handshake.svg?react";
 
 type Props = {
   number: number;
 };
 
-export default function Card({ number }: Props) {
+export default function AdvantageCard({ number }: Props) {
   const cardInfoArray = [
     {
       title: "Списали долги 800+ клиентам",
@@ -36,10 +36,10 @@ export default function Card({ number }: Props) {
   ];
 
   return (
-    <article className="min-h-[250px] w-[270px] p-8 bg-base-100 rounded-lg flex flex-col gap-4">
-      <div className="flex gap-2 w-full">
+    <article className="sm:min-h-[250px] xl:w-[270px] p-8 bg-base-100 rounded-lg flex flex-col gap-4">
+      <div className="flex justify-between  gap-2 w-full">
         <h3 className="text-xl md:text-2xl font-bold">{cardInfoArray[number].title}</h3>
-        <div className="w-32 flex items-center">{cardInfoArray[number].svg}</div>
+        <div className="w-20 sm:w-32 flex items-center">{cardInfoArray[number].svg}</div>
       </div>
       <p className="text-sm text-paragraph-100">{cardInfoArray[number].paragraph}</p>
     </article>

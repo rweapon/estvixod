@@ -1,4 +1,4 @@
-import { ActionDialog } from "@shared/ui";
+import { ActionDialog } from "@features/action";
 import ActionCall from "@shared/assets/actioncall/actioncall.png";
 
 export default function CallToAction() {

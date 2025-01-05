@@ -126,7 +126,7 @@
 
   .achievement_text {
     & h3 {
-      @apply text-4xl md:text-5xl font-bold leading-tight;
+      @apply text-4xl md:text-5xl font-bold leading-tight md:leading-normal;
     }
 
     & p {
@@ -136,5 +136,9 @@
 
   .achievements_bg {
     @apply absolute top-0 left-0 w-full h-full bg-[url("@shared/assets/achievements_bg/achievements_bg.png")] bg-cover bg-center;
+  }
+
+  .docs_bg {
+    @apply absolute top-0 left-0 w-full h-full bg-[url("@shared/assets/docs_bg/docs_bg.png")] bg-cover bg-center;
   }
 }
