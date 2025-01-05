@@ -7,9 +7,9 @@
     font-size: 16px;
     --base-100: 220, 65%, 99%;
     --base-200: 220, 65%, 95%;
-    --paragraph-100: 15, 2%, 33%;
-    --paragraph-200: 20, 3%, 21%;
-    --foreground: 0, 2%, 9%;
+    --paragraph-100: 214, 50%, 35%;
+    --paragraph-200: 214, 50%, 30%;
+    --foreground: 214, 50%, 25%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --popover: 0 0% 100%;
@@ -18,7 +18,7 @@
     --input: 214.3 31.8% 91.4%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
-    --primary: 0, 2%, 9%;
+    --primary: 214, 50%, 25%;
     --primary-foreground: 220, 65%, 99%;
     --secondary: 214, 50%, 25%;
     --secondary-100: 217, 70%, 70%;
@@ -126,7 +126,7 @@
 
   .achievement_text {
     & h3 {
-      @apply font-sans text-4xl md:text-5xl font-bold leading-tight;
+      @apply text-4xl md:text-5xl font-bold leading-tight;
     }
 
     & p {
